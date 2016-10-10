@@ -1,0 +1,14 @@
+/* Page global import*/
+@import "global/_variables.scss";
+@import "global/_mixins.scss";
+@import "global/_guide.scss";
+//blocks
+@import "blocks/_header.scss";
+@import "blocks/_why-section.scss";
+
+.main {
+	display: flex;
+	section {
+		margin: auto;
+	}
+}

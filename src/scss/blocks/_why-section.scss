@@ -1,0 +1,69 @@
+.why {
+	color: #000;
+	min-width: 1000px;
+	width: 1000px;
+	h1 {
+		font-size: 60px;
+		text-align: center;
+		margin: 0 0 80px 0;
+	}
+}
+.why-holder {
+
+}
+.why-gallery {
+	float: right;
+}
+.why-articles-holder {
+	width: 60%;
+	float: left;
+	list-style-type: none;
+}
+.why-article-elem {
+	margin: 0 0 20px 0;
+	padding: 0 0px 0 30px;
+}
+.why-gallery {
+	width: 40%;
+}
+.why-heading {
+	font-weight: normal;
+}
+
+.icon-note,
+.icon-quality,
+.icon-technologies,
+.icon-place {
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		left: -100px;
+	}
+}
+.why-article-item-text {
+	position: relative;
+	font-size: 20px;
+}
+.icon-note {
+	&:before {
+		background: url(../img/sprite/Note.png) 0 0 no-repeat;
+	}
+}
+.icon-quality {
+	&:before {
+		background: url(../img/sprite/Quality.png) 0 0 no-repeat;
+	}
+}
+.icon-technologies {
+	&:before {
+		background: url(../img/sprite/Technologies.png) 0 0 no-repeat;
+	}
+}
+.icon-place {
+	&:before {
+		background: url(../img/sprite/Place.png) 0 0 no-repeat;
+	}
+}

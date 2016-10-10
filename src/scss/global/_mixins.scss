@@ -1,0 +1,114 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin size ($width, $height){
+  width:$width;
+  height: $height;
+}
+
+@mixin sprite ($name) {
+	background: url($sprite_path + $name) no-repeat 0 0;
+}
+
+
+@mixin after-sprite ($name, $width, $height) {
+  &:after {
+    content: "";
+    display: inline-block;
+    background: url($sprite_path + $name) no-repeat 0 0;
+    vertical-align: middle;
+    @include size($width, $height);
+    margin-left: 5px;
+  }
+}
+
+@mixin absolute-before-sprite ($name, $width, $height, $bottom, $left) {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url($sprite_path + $name) no-repeat 0 0;
+    bottom: $bottom;
+    left: $left;
+    @include size($width, $height);
+  }
+}
+
+@mixin absolute-after-sprite ($name, $width, $height, $bottom, $left) {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url($sprite_path + $name) no-repeat 0 0;
+    bottom: $bottom;
+    right: $left;
+    @include size($width, $height);
+  }
+}
+
+@mixin arrow-before ($width, $height, $color, $border-width, $bottom, $left, $rotate) {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    @include size($width, $height);
+    width: $width;
+    height: $height;
+    border: 4px solid $color;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate($rotate);
+    z-index: 100;
+  }
+}
+
+@mixin arrow-after ($width, $height, $color, $border-width, $bottom, $right, $rotate) {
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: $bottom;
+    right: $right;
+    width: $width;
+    height: $height;
+    border: 4px solid $color;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate($rotate);
+    z-index: 100;
+
+  }
+}
+
+
+
+@mixin heading-link ($color) {
+  color: $color;
+  &:hover {
+    color: $color;
+    text-decoration: none;
+  }
+  &:visited{
+    color: $color;
+  }
+}
+
+@mixin heading-link_hover-underline ($color) {
+  color: $color;
+    text-decoration: none;
+  &:hover {
+    color: $color;
+    text-decoration: underline;
+  }
+  &:visited{
+    color: $color;
+  }
+}
